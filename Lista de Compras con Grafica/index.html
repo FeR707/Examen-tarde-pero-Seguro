@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+    <script src="Chart.js"></script>
+    
+
+    <style>
+        #tabla tbody td {text-align:center;}
+        #tabla th,#tabla td  {padding:1px 10px;border:1px solid rgb(1, 2, 2);
+            background: gray;}
+
+        #titulo{
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        
+        button{
+            background: rgb(254, 255, 253);
+        }
+
+        .lista{text-align: center;}
+    </style>
+    
+</head>
+<body>
+    
+    <h1 id="titulo">Lista de Compras</h1>
+<center>
+    <table id="tabla">
+        <tr >
+            <td style="color: rgb(0, 0, 0);"><b>Objetos</b></td>
+            <td style="color: rgb(0, 0, 0);"><b>Precio</b></td>
+            <td style="color: rgb(0, 0, 0);"><b>Comprar</b></td>
+        </tr>
+
+        <tr>
+            <td > <input type="text" id="obj1" value="Tablet" disabled> </td>
+            <td > <input type="text" id="num1" value="1000" disabled> </td>
+
+            <td><button onclick="agregar1()" id="boton1">Agregar</button></td>
+        </tr>
+
+        <tr class="tabla">
+
+            <td > <input type="text" id="obj2" value="Mouse" disabled> </td>
+            <td > <input type="text" id="num2" value="500" disabled> </td>
+
+            <td><button onclick="agregar2()" id="boton2">Agregar</button></td>
+        </tr>
+
+        <tr class="tabla">
+
+            <td > <input type="text" id="obj3" value="Monitor" disabled> </td>
+            <td > <input type="text" id="num3" value="2000" disabled> </td>
+
+            <td><button onclick="agregar3()" id="boton3">Agregar</button></td>
+        </tr>
+
+        <tr >
+
+            <td > <input type="text" id="obj4" value="Teclado" disabled> </td>
+            <td > <input type="text" id="num4" value="600" disabled> </td>
+
+            <td><button onclick="agregar4()" id="boton4">Agregar</button></td>
+        </tr>
+</table>
+</center>
+<br><br><br><br>
+
+<center>
+    <table>
+        <tr>
+            <td><b>Seleccionados</b></td><td></td>
+            <td><center><b>Cantidad</b></center></td>
+        </tr>
+
+        <tr class="lista">
+            <td>Tablet</td><td></td>
+            <td><p id="tablet">0</p></td>
+        </tr>
+
+        <tr class="lista">
+            <td>Mouse</td><td></td>
+            <td><p id="mouse">0</p></td>
+        </tr>
+
+        <tr class="lista">
+            <td>Monitor</td><td></td>
+            <td><p id="monitor">0</p></td>
+        </tr>
+
+        <tr class="lista">
+            <td>Teclado</td><td></td>
+            <td><p id="teclado">0</p></td>
+        </tr>
+
+        <div id="total" style="position:absolute; padding-left:990px;">
+            <input type="button" value="Calcular"  onclick="calcular()">
+            <input type="text" id="resultado" disabled>
+        </div>
+    </table>
+</center>
+
+<br><br>
+<canvas id="grafica" width="400" height="300"></canvas>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
